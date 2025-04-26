@@ -1,9 +1,12 @@
 import "./App.css";
+import MainLayout from "./MainLayout";
 
 function App() {
   return (
     <>
-      <div>PROMETEO INVENTORY</div>
+      <MainLayout>
+        <div>PROMETEO INVENTORY</div>
+      </MainLayout>
     </>
   );
 }
