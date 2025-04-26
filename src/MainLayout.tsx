@@ -1,10 +1,12 @@
 import { HomeOutlined } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const { Sider, Content } = Layout;
 
 function MainLayout(props: any) {
+  const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState<boolean>(true);
   return (
     <Layout style={{ height: "100vh" }}>
@@ -17,7 +19,12 @@ function MainLayout(props: any) {
       >
         <div>
           <Menu>
-            <Menu.Item>
+            <Menu.Item
+              onClick={() => {
+                navigate("/");
+              }}
+              key="home"
+            >
               <HomeOutlined />
               <span>Home</span>
             </Menu.Item>
