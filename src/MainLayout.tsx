@@ -1,4 +1,4 @@
-import { HomeOutlined } from "@ant-design/icons";
+import { FileTextOutlined, HomeOutlined } from "@ant-design/icons";
 import { Layout, Menu } from "antd";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -27,6 +27,14 @@ function MainLayout(props: any) {
             >
               <HomeOutlined />
               <span>Home</span>
+            </Menu.Item>
+            <Menu.Item
+              onClick={() => {
+                navigate("/products");
+              }}
+            >
+              <FileTextOutlined />
+              <span>Products</span>
             </Menu.Item>
           </Menu>
         </div>
